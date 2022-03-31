@@ -30,26 +30,24 @@ public class LoginActivity extends AppCompatActivity {
         Typeface font1=Typeface.createFromAsset(getAssets(),"font/JosefinSans-Bold.ttf");
         Typeface font2=Typeface.createFromAsset(getAssets(),"font/JosefinSans-SemiBold.ttf");
         txtLogin.setTypeface(font1);
+        txtusername.setTypeface(font2);
+        txtpassword.setTypeface(font2);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnLogin.setOnClickListener(v -> {
 
-                String usernameKey = txtusername.getText().toString();
-                String passwordKey = txtpassword.getText().toString();
+            String usernameKey = txtusername.getText().toString();
+            String passwordKey = txtpassword.getText().toString();
 
-                if (usernameKey.equals("rus") && passwordKey.equals("123")){
-                    Toast.makeText(getApplicationContext(), "Login Berhasil!",
-                            Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
-                    LoginActivity.this.startActivity(intent);
-                    finish();
-                }else {
-                    Toast.makeText(getApplicationContext(), "Username atau Password salah!",
-                            Toast.LENGTH_SHORT).show();
-                }
+            if (usernameKey.equals("rus") && passwordKey.equals("123")){
+                Toast.makeText(getApplicationContext(), "Login Berhasil!",
+                        Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+                LoginActivity.this.startActivity(intent);
+                finish();
+            }else {
+                Toast.makeText(getApplicationContext(), "Username atau Password salah!",
+                        Toast.LENGTH_SHORT).show();
             }
-
         });
     }
 }
