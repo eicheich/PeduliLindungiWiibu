@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity"
+    android:background="@color/main"
     android:paddingTop="95dp">
 
     <LinearLayout
@@ -41,7 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/main"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
             android:text="@string/mulai" />
     </LinearLayout>
 
